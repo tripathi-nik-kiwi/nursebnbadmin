@@ -1,8 +1,8 @@
-
+import ListPads from '../../components/ListPads';
 const Listing = () =>{
   return(
     <>
-       <p>This is your right section</p>
+       <ListPads/>
     </>
   )
 }
