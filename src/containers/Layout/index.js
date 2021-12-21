@@ -1,17 +1,20 @@
-import Container from '@material-ui/core/Container';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Container,Row,Col} from 'react-bootstrap';
 import Sidebar from '../Sidebar';
 import classes from './layout.module.css';
 
 const Layout = ({children}) => {
   return (
     <>
-    <Container maxWidth="xl">
-     <Container maxWidth="xs" className={classes.navContainer}>
+    <Container>
+     <Row>
+      <Col md={3} lg={3}>
        <Sidebar/>
-     </Container>
-     <Container maxWidth="sm">
-      {children}
-     </Container>
+      </Col>
+      <Col md={9}>
+        {children}
+      </Col>
+     </Row>
     </Container>
     </>
   );
